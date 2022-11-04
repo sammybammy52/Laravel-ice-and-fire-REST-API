@@ -25,7 +25,7 @@ php artisan serve
 
 
 ## End-point: External API Books Search
-To get a book from the external API, you need to pass a query parameter with a variable of 'name' as its seen in the link below. an example book name is 'A Clash of Kings'. if no query parameter is passed, all books will be returned.
+To get a book from the external API, you need to pass a query parameter with a variable of ==name== as its seen in the link below. an example book name is 'A Clash of Kings'. if no query parameter is passed, all books will be returned.
 ### Method: GET
 >```
 >http://localhost:8000/api/external-books?name=:nameOfABook

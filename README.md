@@ -25,7 +25,7 @@ php artisan serve
 
 
 ## End-point: External API Books Search
-To get a book from the external API, you need to pass a query parameter with a variable of 'name' as its seen in the link above. an example book name is 'A Clash of Kings'. if no query parameter is passed, all books will be returned.
+To get a book from the external API, you need to pass a query parameter with a variable of 'name' as its seen in the link below. an example book name is 'A Clash of Kings'. if no query parameter is passed, all books will be returned.
 ### Method: GET
 >```
 >http://localhost:8000/api/external-books?name=:nameOfABook
@@ -41,7 +41,7 @@ To get a book from the external API, you need to pass a query parameter with a v
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Create Book
-To store a book in your database, you have to send a POST request to the endpoint above.
+To store a book in your database, you have to send a POST request to the endpoint below.
 
 You also have to add an accept header to accept application/json
 
@@ -56,7 +56,7 @@ You must pass in the following parameters.
         <li> release_date </li>
      </ul>
 
-a sample raw JSON object can be seen below
+a sample raw JSON object can also be seen below
 ### Method: POST
 >```
 >http://localhost:8000/api/v1/books
@@ -89,20 +89,21 @@ a sample raw JSON object can be seen below
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Retrieve Books
-To retrieve books from your database you have to send a GET request to the URL endpoint above, it also has a search functionality.
+To retrieve books from your database you have to send a GET request to the URL endpoint below, it also has a search functionality.
 
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books
 >```
 
-To search for books with the above endpoint, you just have to pass in a query parameter of 'search' it allows you to search the 'name', 'country' and 'publisher' columns in the database. you are also able to search by year by adding 'year' to the query parameters
+To search for books with the above endpoint, you just have to pass in a query parameter of 'search' it allows you to search the 'name', 'country' and 'publisher' columns in the database. 
 
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books?search=:searchKey
 >```
 
+You are also able to search by year by adding 'year' to the query parameters
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books?year=:year
@@ -113,12 +114,11 @@ In addition you call also pass in both 'search' and 'year' query parameters at t
 >```
 >http://localhost:8000/api/v1/books?search=:searchKey&year=:year
 >```
->```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Update Book
-To update any of the records in your database you have to send a PATCH request to the URL endpoint above. where :id is the id of the specific book you want to update. you must also attach the fields you want to update.
+To update any of the records in your database you have to send a PATCH request to the URL endpoint below. where :id is the id of the specific book you want to update. you must also attach the fields you want to update.
 
 <ul>
         <li> name </li>
@@ -147,7 +147,7 @@ an Example is attached below
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Delete Book
-To delete a book, send a DELETE request to the URL endpoint above, where :id is the id of the specific book you want to delete
+To delete a book, send a DELETE request to the URL endpoint below, where :id is the id of the specific book you want to delete
 ### Method: DELETE
 >```
 >http://localhost:8000/api/v1/books/:id
@@ -156,7 +156,7 @@ To delete a book, send a DELETE request to the URL endpoint above, where :id is 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Alternative Delete Route
-An alternate delete route with the same functionality with the delete route above where :id is the id of the specific book you want to delete
+An alternate delete route with the same functionality with the delete route below where :id is the id of the specific book you want to delete
 ### Method: POST
 >```
 >http://localhost:8000/api/v1/books/:id/delete
@@ -172,7 +172,7 @@ An alternate delete route with the same functionality with the delete route abov
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Show Book
-To view an individual book send a GET Request to the URL endpoint above where :id is the id of the specific book your'e looking for
+To view an individual book send a GET Request to the URL endpoint below where :id is the id of the specific book your'e looking for
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books/:id

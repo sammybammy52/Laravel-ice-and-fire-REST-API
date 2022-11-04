@@ -25,7 +25,7 @@ php artisan serve
 
 
 ## End-point: External API Books Search
-To get a book from the external API, you need to pass a query parameter with a variable of **name** as its seen in the link below. an example book name is **A Clash of Kings**. if no query parameter is passed, all books will be returned.
+To get a book from the external API, you need to pass a query parameter with a variable of **'name'** as its seen in the link below. an example book name is **'A Clash of Kings'**. if no query parameter is passed, all books will be returned.
 ### Method: GET
 >```
 >http://localhost:8000/api/external-books?name=:nameOfABook
@@ -96,20 +96,20 @@ To retrieve books from your database you have to send a GET request to the URL e
 >http://localhost:8000/api/v1/books
 >```
 
-To search for books with the above endpoint, you just have to pass in a query parameter of **search** it allows you to search the **name**, **country** and **publisher** columns in the database. 
+To search for books with the above endpoint, you just have to pass in a query parameter of **'search'** it allows you to search the **'name'**, **'country'** and **'publisher'** columns in the database. 
 
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books?search=:searchKey
 >```
 
-You are also able to search by year by adding **year** to the query parameters
+You are also able to search by year by adding **'year'** to the query parameters
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books?year=:year
 >```
 
-In addition you call also pass in both **search** and **year** query parameters at the same time to narrow down your search even more.
+In addition you call also pass in both **'search'** and **'year'** query parameters at the same time to narrow down your search even more.
 ### Method: GET
 >```
 >http://localhost:8000/api/v1/books?search=:searchKey&year=:year
